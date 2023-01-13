@@ -4,7 +4,7 @@
   color: var(--text-primary);
   background-color: var(--background);
   transition: all 0.5s;
-  padding: 4rem;
+  padding: 7rem;
   gap: 1.2rem;
 }
 
@@ -15,10 +15,92 @@
 }
 
 .hero-content {
-  background-image: linear-gradient(135deg, #fada94e7 10%, #3676ff4f 100%);
+  background: #a1ffce;
+  background: -webkit-linear-gradient(
+    to right,
+    #faffd15d,
+    #a1ffce
+  );
+  background: linear-gradient(
+    to right,
+    #faffd1a8,
+    #a1ffce9d
+  );
+
   border-radius: 1rem;
+  padding: 1.5rem;
+
+  h1 {
+    font-size: 3.6vw;
+  }
+
+  p {
+    font-size: 2.5vmin;
+    width: 85%;
+  }
 }
 
+.contact-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  min-height: 3rem;
+}
+
+.contact-btn {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #000000;
+  padding: 0.5em 1.5em;
+  border: none;
+  color: rgba(255, 255, 255, 0.979);
+  font-size: 3vmin;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.contact-btn span {
+  position: relative;
+  pointer-events: none;
+}
+.contact-btn::before {
+  --size: 0;
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #e9fff638, transparent);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+.contact-btn:hover::before {
+  --size: 400px;
+}
+.brand-icon {
+  background-color: #000000;
+  padding: 0.7rem;
+  font-size: 3vmin;
+  border-radius: 50%;
+  color: #989b9b;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    color: #fff;
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 3px solid #00d7c3;
+  }
+}
 .hero-picture {
   border-radius: 1rem;
 }
@@ -35,8 +117,23 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.project-card {
-  background-color: rgba(174, 96, 197, 0.438);
-  border-radius: 1rem;
-  padding: 1rem;
+@media (max-width: 40rem) {
+  .container {
+    padding: 2rem;
+  }
+  .profile-pic {
+    display: none;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 80rem) {
+  .container {
+    padding: 2rem;
+  }
 }

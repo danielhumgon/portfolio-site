@@ -1,0 +1,67 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  background: #0f2027;
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  );
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  );
+
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 90%;
+  h3 {
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.1em;
+    color: #fff;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    font-size: 2.2vmin;
+    color: rgba(180, 178, 178, 0.849);
+  }
+}
+
+.image-card {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  align-self: center;
+}
+
+.link-icon {
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    color: #00d7c3;
+  }
+}
