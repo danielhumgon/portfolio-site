@@ -1,25 +1,45 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import "./header.scss";
 
 const Header = () => {
-  
+  const location = useLocation();
+
   return (
     <nav>
-      <Link to="/">Logo</Link>
+      <Link to="/">
+        Logo
+      </Link>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
+          <Link
+            to="/projects"
+            className={location.pathname === "/projects" ? "active" : ""}
+          >
+            Projects
+          </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link
+            to="/about"
+            className={location.pathname === "/about" ? "active" : ""}
+          >
+            About
+          </Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link
+            to="/contact"
+            className={location.pathname === "/contact" ? "active" : ""}
+          >
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>
