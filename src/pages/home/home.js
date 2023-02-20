@@ -61,11 +61,11 @@ const Home = () => {
           title="Token Tiger"
           description="A user-friendly NFT creator built on the BitcoinCash blockchain, create and share unique digital assets with ease. Built with React and SCSS."
           image={project3}
-          demoLink="https://github.com/danielhumgon"
+          demoLink="https://tokentiger.com/login"
         />
         <Project
           title="STATION 3"
-          description="App built on the Avalanche Network for indie game developers to showcase and distribute their games. Built with React, SCSS and Ethers"
+          description="App built on the Avalanche Network for indie game developers to showcase and distribute their games. Built with React, SCSS, Three.js and Ethers."
           image={project4}
           demoLink="https://stationthree.xyz/"
         />
